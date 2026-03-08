@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  chess-app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_SUPABASE_URL=${VITE_SUPABASE_URL}
+      - SUPABASE_SERVICE_KEY=${SUPABASE_SERVICE_KEY}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - PORT=3000
+    volumes:
+      - .:/app
+      - /app/node_modules
+    restart: unless-stopped

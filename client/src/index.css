@@ -1,0 +1,203 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #00d9ff, #00ff88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header p {
+  color: #8892b0;
+  font-size: 1.1rem;
+}
+
+.game-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.board-wrapper {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.info-panel {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.info-panel h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #00d9ff;
+}
+
+.game-info {
+  margin-bottom: 20px;
+}
+
+.game-info p {
+  margin: 10px 0;
+  color: #ccd6f6;
+}
+
+.status {
+  padding: 10px 15px;
+  background: rgba(0, 217, 255, 0.1);
+  border-left: 4px solid #00d9ff;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+
+.move-history {
+  margin-top: 20px;
+}
+
+.move-history h3 {
+  color: #00ff88;
+  margin-bottom: 10px;
+}
+
+.moves-list {
+  max-height: 300px;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 0.95rem;
+}
+
+.moves-list p {
+  margin: 5px 0;
+  color: #8892b0;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #00d9ff, #00ff88);
+  color: #1a1a2e;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 217, 255, 0.4);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.login-prompt {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.login-prompt h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #00d9ff;
+}
+
+.login-prompt p {
+  color: #8892b0;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.ranking-preview {
+  margin-top: 30px;
+}
+
+.ranking-preview h3 {
+  color: #00ff88;
+  margin-bottom: 15px;
+}
+
+.ranking-list {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ranking-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ranking-item:last-child {
+  border-bottom: none;
+}
+
+.ranking-item .rank {
+  color: #00d9ff;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.ranking-item .player {
+  flex: 1;
+  color: #ccd6f6;
+}
+
+.ranking-item .elo {
+  color: #00ff88;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .game-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .info-panel {
+    width: 100%;
+    max-width: none;
+  }
+}
